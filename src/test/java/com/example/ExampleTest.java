@@ -1,14 +1,22 @@
 package com.example;
 
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class ExampleTest {
     
+    private Example ex;
+
+    // Se ejecuta antes de cada Test (una instancia)
+    @BeforeEach
+    public void init() {
+        this.ex = new Example();
+    }
+
     @Test
     public void testSumar() {
         // Given - Teniendo
-        Example ex = new Example();
         int numA = 3;
         int numB = 4;
         
@@ -23,7 +31,6 @@ public class ExampleTest {
     
     @Test
     public void testCheckPositivo(){
-        Example ex = new Example();
         int num = 4;
         
         boolean res = ex.checkPositivo(num);
@@ -34,7 +41,6 @@ public class ExampleTest {
     @Test
     public void testCheckPositivoError(){
         // Given
-        Example ex = new Example();
         int num = -2;
         // Then
         assertThrows(IllegalArgumentException.class, () -> {
@@ -42,12 +48,13 @@ public class ExampleTest {
         });
     }
     
+    @Test
     public void testContarLetrasA() {
-        Example ex = new Example();
         String cad = "ala";
         
         int res = ex.contarLetrasA(cad);
         
+        assertNotNull(res);
         assertEquals(2, res);
     }
 }

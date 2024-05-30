@@ -1,4 +1,3 @@
-
 package com.example;
 
 import java.util.List;
@@ -6,40 +5,40 @@ import java.util.stream.Collectors;
 
 public class Example {
 
-    // 1. Método para sumar dos números
+    // 1. Mï¿½todo para sumar dos nï¿½meros
     public int sumar(int a, int b) {
         return a + b;
     }
 
-    // 2. Método que lanza una excepción si el argumento es negativo
+    // 2. Mï¿½todo que lanza una excepciï¿½n si el argumento es negativo
     public boolean checkPositivo(int numero) {
         if (numero < 0) {
-            throw new IllegalArgumentException("El número no puede ser negativo");
+            throw new IllegalArgumentException("El nï¿½mero no puede ser negativo");
         }
         return true;
     }
 
-    // 3. Método para contar el número de letras 'a' en una cadena
+    // 3. Mï¿½todo para contar el nï¿½mero de letras 'a' en una cadena
     public int contarLetrasA(String cadena) {
         return (int) cadena.chars()
                 .filter(letra -> letra == 'a')
                 .count();
     }
 
-    // 4. Método que retorna un valor booleano si la lista contiene el elemento
+    // 4. Mï¿½todo que retorna un valor booleano si la lista contiene el elemento
     public boolean contieneElemento(List<String> lista, String elemento) {
         return lista.contains(elemento);
     }
 
-    // 5. Método para revertir una cadena
+    // 5. Mï¿½todo para revertir una cadena
     public String revertirCadena(String cadena) {
         return new StringBuilder(cadena).reverse().toString();
     }
 
-    // 6. Método que calcula el factorial de un número
+    // 6. Mï¿½todo que calcula el factorial de un nï¿½mero
     public long factorial(int numero) {
         if (numero < 0) {
-            throw new IllegalArgumentException("Factorial no definido para números negativos");
+            throw new IllegalArgumentException("Factorial no definido para nï¿½meros negativos");
         }
         long resultado = 1;
         for (int i = 1; i <= numero; i++) {
@@ -48,7 +47,7 @@ public class Example {
         return resultado;
     }
 
-    // 7. Método para verificar si un número es primo
+    // 7. Mï¿½todo para verificar si un nï¿½mero es primo
     public boolean esPrimo(int numero) {
         if (numero <= 1) {
             return false;
@@ -61,23 +60,23 @@ public class Example {
         return true;
     }
 
-    // 8. Método que simula un retraso y retorna un mensaje
+    // 8. Mï¿½todo que simula un retraso y retorna un mensaje
     public String mensajeConRetraso() throws InterruptedException {
         Thread.sleep(5000);
-        return "Listo después de retraso";
+        return "Listo despuï¿½s de retraso";
     }
 
-    // 9. Método para convertir una lista de enteros a lista de strings
+    // 9. Mï¿½todo para convertir una lista de enteros a lista de strings
     public List<String> convertirAString(List<Integer> lista) {
         return lista.stream()
                 .map(String::valueOf)
                 .collect(Collectors.toList());
     }
 
-    // 10. Método que calcula la media de una lista de enteros
+    // 10. Mï¿½todo que calcula la media de una lista de enteros
     public double calcularMedia(List<Integer> lista) {
         if (lista == null || lista.isEmpty()) {
-            throw new IllegalArgumentException("La lista no puede ser nula o vacía");
+            throw new IllegalArgumentException("La lista no puede ser nula o vacï¿½a");
         }
         return lista.stream()
                 .mapToInt(Integer::intValue)
@@ -85,7 +84,7 @@ public class Example {
                 .getAsDouble();
     }
 
-    // 11. Método para convertir una lista de enteros a lista de strings
+    // 11. Mï¿½todo para convertir una lista de enteros a lista de strings
     public String convertirListaAString(List<String> lista) {
         return lista.stream()
                 .map(String::toUpperCase)
