@@ -15,6 +15,12 @@
 
     <build>
         <plugins>
+            <!-- Solución al error: https://stackoverflow.com/questions/49441049/junit-5-does-not-execute-method-annotated-with-beforeeach -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+            </plugin>
             <!-- Medir la cobertura del proyecto -->
             <plugin>
                 <groupId>org.jacoco</groupId>
