@@ -15,13 +15,6 @@
 
     <build>
         <plugins>
-            <!-- Solución al error: Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.2.5</version>
-            </plugin>
-        
             <!-- Medir la cobertura del proyecto -->
             <plugin>
                 <groupId>org.jacoco</groupId>
