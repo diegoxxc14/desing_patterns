@@ -11,4 +11,8 @@ Algunos tipos de Assert
     assertInstanceOf(Integer.class, res); // Validar el tipo de objeto
     assertThrows(expectedType, executable) // Validar excepciones
 
-Siempre que el método a testear tenga condicionales (if) hay branches
+Siempre que el mÃ©todo a testear tenga condicionales (if) hay branches.
+
+Los bucles no son branches
+
+Pasado el umbral de covertura configurado en el pom.xml, ya permite compilar el proyecto
